@@ -1,0 +1,4 @@
+Record=SheetSymbol|SourceDocument=TopLevel.SCHDOC|Designator=Battery|SchDesignator=Battery|FileName=Battery.SCHDOC|SymbolType=Normal|RawFileName=Battery.SCHDOC|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol
+Record=SheetSymbol|SourceDocument=TopLevel.SCHDOC|Designator=LPC11C14|SchDesignator=LPC11C14|FileName=LPC_11C14.SchDoc|SymbolType=Normal|RawFileName=LPC_11C14.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol
+Record=SheetSymbol|SourceDocument=TopLevel.SCHDOC|Designator=PowerSupply|SchDesignator=PowerSupply|FileName=powersupply.SchDoc|SymbolType=Normal|RawFileName=powersupply.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol
+Record=TopLevelDocument|FileName=TopLevel.SCHDOC

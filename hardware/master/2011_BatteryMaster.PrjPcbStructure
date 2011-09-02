@@ -1,0 +1,8 @@
+Record=SheetSymbol|SourceDocument=TopLevel.SCHDOC|Designator=1|SchDesignator=1|FileName=Switched_Outputs.SchDoc|SymbolType=Normal|RawFileName=Switched_Outputs.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol
+Record=SheetSymbol|SourceDocument=TopLevel.SCHDOC|Designator=2|SchDesignator=2|FileName=Switched_Outputs.SchDoc|SymbolType=Normal|RawFileName=Switched_Outputs.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol
+Record=SheetSymbol|SourceDocument=TopLevel.SCHDOC|Designator=3|SchDesignator=3|FileName=Switched_Outputs.SchDoc|SymbolType=Normal|RawFileName=Switched_Outputs.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol
+Record=SheetSymbol|SourceDocument=TopLevel.SCHDOC|Designator=5V-switcher|SchDesignator=5V-switcher|FileName=5V-Switcher.SCHDOC|SymbolType=Normal|RawFileName=5V-Switcher.SCHDOC|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol
+Record=SheetSymbol|SourceDocument=TopLevel.SCHDOC|Designator=U_LPC1768|SchDesignator=U_LPC1768|FileName=LPC1768.SchDoc|SymbolType=Normal|RawFileName=LPC1768.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol
+Record=SheetSymbol|SourceDocument=TopLevel.SCHDOC|Designator=Unisolated CAN|SchDesignator=Unisolated CAN|FileName=3V3-CAN-UNISOLATED.SchDoc|SymbolType=Normal|RawFileName=3V3-CAN-UNISOLATED.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol
+Record=SheetSymbol|SourceDocument=3V3-CAN-UNISOLATED.SchDoc|Designator=U_3V-Switcher-50mA|SchDesignator=U_3V-Switcher-50mA|FileName=3V-Switcher-50mA.SCHDOC|SymbolType=Normal|RawFileName=3V-Switcher-50mA.SCHDOC|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol
+Record=TopLevelDocument|FileName=TopLevel.SCHDOC
