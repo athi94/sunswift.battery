@@ -81,7 +81,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document5]
-DocumentPath=..\..\libraries\AVR.SchLib
+DocumentPath=..\..\libaltium\AVR.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -95,7 +95,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document6]
-DocumentPath=..\..\libraries\Biel.PcbLib
+DocumentPath=..\..\libaltium\Biel.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -109,7 +109,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document7]
-DocumentPath=..\..\libraries\CAN.SchLib
+DocumentPath=..\..\libaltium\CAN.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -123,7 +123,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document8]
-DocumentPath=..\..\libraries\Connectors.PcbLib
+DocumentPath=..\..\libaltium\Connectors.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -137,7 +137,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document9]
-DocumentPath=..\..\libraries\Connectors.SchLib
+DocumentPath=..\..\libaltium\Connectors.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -151,7 +151,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document10]
-DocumentPath=..\..\libraries\DCDC-Converters.PcbLib
+DocumentPath=..\..\libaltium\DCDC-Converters.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -165,7 +165,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document11]
-DocumentPath=..\..\libraries\DCDC-Converters.SchLib
+DocumentPath=..\..\libaltium\DCDC-Converters.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -179,7 +179,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document12]
-DocumentPath=..\..\libraries\Footprint.PcbLib
+DocumentPath=..\..\libaltium\Footprint.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -193,7 +193,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document13]
-DocumentPath=..\..\libraries\LPC.SchLib
+DocumentPath=..\..\libaltium\LPC.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -207,7 +207,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document14]
-DocumentPath=..\..\libraries\Miscellaneous.SchLib
+DocumentPath=..\..\libaltium\Miscellaneous.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -221,7 +221,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document15]
-DocumentPath=..\..\libraries\MiscellaneousIC.schlib
+DocumentPath=..\..\libaltium\MiscellaneousIC.schlib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -235,7 +235,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document16]
-DocumentPath=..\..\libraries\MSP430.SchLib
+DocumentPath=..\..\libaltium\MSP430.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -249,7 +249,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document17]
-DocumentPath=..\..\libraries\Optocouplers.SchLib
+DocumentPath=..\..\libaltium\Optocouplers.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -263,7 +263,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document18]
-DocumentPath=..\..\libraries\PLEB.SCHLIB
+DocumentPath=..\..\libaltium\PLEB.SCHLIB
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -277,7 +277,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document19]
-DocumentPath=..\..\libraries\RCLDQ.SCHLIB
+DocumentPath=..\..\libaltium\RCLDQ.SCHLIB
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -291,7 +291,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document20]
-DocumentPath=..\..\libraries\Regulators.SCHLIB
+DocumentPath=..\..\libaltium\Regulators.SCHLIB
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -305,7 +305,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document21]
-DocumentPath=..\..\libraries\RF.PcbLib
+DocumentPath=..\..\libaltium\RF.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -319,7 +319,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document22]
-DocumentPath=..\..\libraries\RF.SchLib
+DocumentPath=..\..\libaltium\RF.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -333,7 +333,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document23]
-DocumentPath=..\..\libraries\Transducers.SCHLIB
+DocumentPath=..\..\libaltium\Transducers.SCHLIB
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -347,7 +347,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 
 [Document24]
-DocumentPath=..\..\libraries\Triads.PcbLib
+DocumentPath=..\..\libaltium\Triads.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
