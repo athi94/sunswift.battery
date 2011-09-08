@@ -1,8 +1,8 @@
 #directory definitions
-ROOT = ..
+ROOT = ../..
 SCANDAL = $(ROOT)/scandal
 ARCH = $(SCANDAL)/src/arch/lpc11c14
-UTILS = ../../$(ROOT)/utils
+UTILS = $(ROOT)/utilities
 LINKER = $(ARCH)/linker
 CMSIS = $(ARCH)/cmsis
 DRIVERS = $(ARCH)/drivers
@@ -33,7 +33,7 @@ STARTUPSCRIPT = cr_startup_lpc11
 
 OBJECTS  = main.o scandal_obligations.o
 OBJECTS += core_cm0.o system_LPC11xx.o leds.o
-OBJECTS += gpio.o timer32.o uart.o can.o i2c.o flash.o
+OBJECTS += gpio.o timer32.o uart.o can.o i2c.o flash.o adc.o
 OBJECTS += engine.o error.o manager.o maths.o message.o utils.o
 OBJECTS += $(STARTUPSCRIPT).o
 
@@ -137,6 +137,10 @@ i2c.o: $(DRIVERS)/i2c.c
 	@echo "[CC] cmsis/i2c.c                 this is the LPC I2C driver"
 	@$(CC) $(CFLAGS) -c -o $(BUILD)/$@ $<
 
+adc.o: $(DRIVERS)/adc.c
+	@echo "[CC] cmsis/adc.c                 this is the LPC ADC driver"
+	@$(CC) $(CFLAGS) -c -o $(BUILD)/$@ $<
+
 $(STARTUPSCRIPT).o: $(STARTUP)/$(STARTUPSCRIPT).c
 	@echo "[CC] startup.c"
 	@$(CC) $(CFLAGS) -c -o $(BUILD)/$@ $<
@@ -171,7 +175,7 @@ program: main.axf
 	@lsusb | grep -q "1fc9:0009"; \
 	if [ $$? -eq 0 ]; then \
 		echo -e "\033[91m[PROGRAM]   detected LPC Expresso in correct mode, attempting program\033[0m"; \
-		$(FLASH_CHIP) -wire=winusb -p$(UC) -flash-load-exec=$(BUILD)/main.axf > /dev/null 2>&1; \
+		$(FLASH_CHIP) -wire=winusb -p$(UC) -flash-load-exec=$(BUILD)/main.axf; \
 	fi
 
 #program using .bin, doesn't seem to work atm

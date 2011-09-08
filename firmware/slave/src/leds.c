@@ -38,23 +38,23 @@
 
 void red_led(u08 on) {
 	if (on)
-		GPIOSetValue(2,8,0);
+		GPIOSetValue(RED_LED_PORT,RED_LED_PIN,0);
 	else
-		GPIOSetValue(2,8,1);
+		GPIOSetValue(RED_LED_PORT,RED_LED_PIN,1);
 }
 
 void toggle_red_led(void) {
-	LPC_GPIO[RED_LED_PORT]->MASKED_ACCESS[(1<<RED_LED_BIT)] ^= (1<<RED_LED_BIT);
+	LPC_GPIO[RED_LED_PORT]->MASKED_ACCESS[(1<<RED_LED_PIN)] ^= (1<<RED_LED_PIN);
 }
 
-void yellow_led(u08 on) {
+void orange_led(u08 on) {
 	if (on)
-		GPIOSetValue(2,7,0);
+		GPIOSetValue(ORANGE_LED_PORT,ORANGE_LED_PIN,0);
 	else
-		GPIOSetValue(2,7,1);
+		GPIOSetValue(ORANGE_LED_PORT,ORANGE_LED_PIN,1);
 }
 
-void toggle_yellow_led(void) {
-	LPC_GPIO[YELLOW_LED_PORT]->MASKED_ACCESS[(1<<YELLOW_LED_BIT)] ^= (1<<YELLOW_LED_BIT);
+void toggle_orange_led(void) {
+	LPC_GPIO[ORANGE_LED_PORT]->MASKED_ACCESS[(1<<ORANGE_LED_PIN)] ^= (1<<ORANGE_LED_PIN);
 }
 
