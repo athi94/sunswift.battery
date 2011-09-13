@@ -140,13 +140,9 @@ int main (void) {
 
 
 int readVoltage(void) {
-	//enable voltage sense mosfet
 	GPIOSetValue(VOLT_SENSE_EN_PORT, VOLT_SENSE_EN_PIN, ON);
-	//wait?
 	scandal_delay(100);
-	//read voltage
 	ADCRead(ADC_VOLT);
-	//disable voltage sense mosfet
 	GPIOSetValue(VOLT_SENSE_EN_PORT, VOLT_SENSE_EN_PIN, OFF);
 	
 	return ADCValue[ADC_VOLT];	//error checking?
@@ -182,16 +178,16 @@ int discharge(int argument, int mode) {
 	
 }
 
+//determine ID based on 6 GPIO pins
 int readID(void) {
-	//determine ID based on 6 GPIO pins, is it possible to use the unique micro ID
 	int ID = 0;
-	/*   ID |= (gpioGetValue(ID_PORT, ID0_PIN));
-	ID |= (gpioGetValue(ID_PORT, ID1_PIN)<<1);
-	ID |= (gpioGetValue(ID_PORT, ID2_PIN)<<2);
-	ID |= (gpioGetValue(ID_PORT, ID3_PIN)<<3);
-	ID |= (gpioGetValue(ID_PORT, ID4_PIN)<<4);
-	ID |= (gpioGetValue(ID_PORT, ID5_PIN)<<5);
-	*/   
+	ID |= (GPIO_GetValue(ID_PORT, ID0_PIN));
+	ID |= (GPIO_GetValue(ID_PORT, ID1_PIN)<<1);
+	ID |= (GPIO_GetValue(ID_PORT, ID2_PIN)<<2);
+	ID |= (GPIO_GetValue(ID_PORT, ID3_PIN)<<3);
+	ID |= (GPIO_GetValue(ID_PORT, ID4_PIN)<<4);
+	ID |= (GPIO_GetValue(ID_PORT, ID5_PIN)<<5);
+	return ID;
 }
 
 void burstmode(int mode) {
