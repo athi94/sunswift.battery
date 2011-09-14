@@ -1,5 +1,6 @@
 syntax: glob
 
+*Project Logs for*
 *Preview
 *htm
 *History
@@ -14,3 +15,4 @@ syntax: glob
 */Project Outputs*
 cscope.files
 cscope.out
+*~

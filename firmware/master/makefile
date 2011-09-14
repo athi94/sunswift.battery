@@ -9,7 +9,7 @@ CHIP = lpc1768
 MAIN_NAME = template
 
 # Directory definitions
-ROOT = ..
+ROOT = ../..
 SCANDAL = $(ROOT)/scandal
 ARCH = $(SCANDAL)/src/arch/$(CHIP)
 DRIVERS = $(ARCH)/drivers
