@@ -1,4 +1,3 @@
-
 /* --------------------------------------------------------------------------                                 
     Template project main
     File name: template.c
@@ -219,7 +218,7 @@ int main(void) {
 		if(sc_get_timer() >= one_sec_timer + 1000) {
 			/* Send the message */
 
-			/* Send a channel message with a blerg value at low priority on channel -1 */
+			/* Send a channel message with a blerg value at low priority on channel 0 */
 			scandal_send_channel(TELEM_LOW, /* priority */
 									0,      /* channel num */
 									0xaa   /* value */
