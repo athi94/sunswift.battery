@@ -35,5 +35,8 @@
 #define CONFIG_ADC_DEFAULT_ADC_IRQHANDLER				1
 #define BURST_MODE										0
 
+//#define CONFIG_GPIO_DEFAULT_PIOINT1_IRQHANDLER			1
+
+
  /* DRIVER_CONFIG_H_ */
 #endif

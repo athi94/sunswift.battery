@@ -59,7 +59,6 @@
 
 #include <string.h>
 
-#if defined(lpc11c14) || defined(lpc1768)
 #include <project/driver_config.h>
 #include <project/target_config.h>
 #include <arch/can.h>
@@ -68,91 +67,14 @@
 #include <arch/gpio.h>
 #include <arch/types.h>
 #include <arch/i2c.h>
-#else
-#ifdef msp430f149
-#include <msp430x14x.h>
-#include <signal.h>
-#include <project/hardware.h>
-
-/* Set up the clocks on the MSP430f149. Use XTAL2, which is externally attached */
-void init_clock(void) {
-	volatile unsigned int i;
-
-	/* XTAL = LF crystal, ACLK = LFXT1/1, DCO Rset = 4, XT2 = ON */
-	BCSCTL1 = 0x04;
-
-	/* Clear OSCOFF flag - start oscillator */
-	_BIC_SR( OSCOFF );
-
-	do {
-		/* Clear OSCFault flag */
-		IFG1 &= ~OFIFG; 
-		/* Wait for flag to set */
-		for( i = 255; i > 0; i-- )
-			;
-	} while(( IFG1 & OFIFG ) != 0);
-
-	/* Set MCLK to XT2CLK and SMCLK to XT2CLK */
-	BCSCTL2 = 0x88; 
-} // init_clock
-
-/* The interrupt line on the MCP2515 CAN controller can be connected to
- * any interrupt enabled GPIO, hence we allow the developer to handle these
- * functions */
-void enable_can_interrupt(){
-	P2IE = CAN_INT;
-}
-
-void disable_can_interrupt(){
-	P2IE = 0x00;
-}
-
-interrupt (PORT2_VECTOR) port2int(void) {
-	can_interrupt();
-	P2IFG = 0x00;
-}
-
-#endif // msp430f149
-#endif // lpc11c14 || lpc1768
 
 /* Do some general setup for clocks, LEDs and interrupts
  * and UART stuff on the MSP430 */
 void setup(void) {
-#if defined(lpc11c14) || defined(lpc1768)
 	GPIO_Init();
 	GPIO_SetDir(2,8,1); //Green LED, Out
 	GPIO_SetDir(2,7,1); //Yel LED, Out
-#else
-#ifdef msp43f149
-	init_clock();
-
-	P1OUT = 0x00;
-	P1SEL = 0x00;
-	P1DIR = 0x00;
-	P1IES = 0x00;
-	P1IE  = 0x00;
-	
-	P2OUT = 0x00;
-	P2SEL = 0x00;
-	P2DIR = 0x00;
-	P2IES = CAN_INT;
-	P2IE  = 0x00;
-
-	P3OUT = 0x00;
-	P3SEL = TX | RX;
-	P3DIR = TX;
-
-	P4OUT = 0x00;
-	P4SEL = 0x00;
-	P4DIR = 0x00;
-
-	P5OUT = CAN_CS;
-	P5SEL = SIMO1 | SOMI1 | UCLK1;
-	P5DIR = CAN_CS | SIMO1 | UCLK1 | YELLOW_LED_BIT | RED_LED_BIT;
-
-	P6SEL = MEAS_12V_PIN;
-#endif // msp430f149
-#endif // lpc1768 || lpc11c14
+	GPIO_SetDir()
 } // setup
 
 /* This is an in-channel handler. It gets called when a message comes in on the
@@ -254,3 +176,8 @@ int main(void) {
 		}
 	}
 }
+
+
+
+GPIO_SetDir
+GPIO_SetValure

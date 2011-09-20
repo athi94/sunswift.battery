@@ -38,10 +38,18 @@ void in_channel_0_handler(int32_t value, uint32_t src_time) {
 	UART_printf("in_channel_0_handler got called with value %d time at source %d\n\r", value, src_time);
 }
 
-
-//int ADCValue[8] = {0};
-
-#define DEBUG TRUE
+/*
+ * In channels
+ *	-discharge
+ *	-sleep
+ *
+ * Out channels
+ *	-voltage
+ *	-temperature
+ *	-discharge status??
+ *
+ *
+ */
 
 
 int readVoltage(void);
@@ -67,22 +75,17 @@ int main (void) {
 	uint32_t value = 0xaa;
 	setup_ports();
 	
-	scandal_init();
-	UART_Init(115200);
-	ADCInit(ADC_CLK);
 	sc_time_t one_sec_timer = sc_get_timer(); /* Initialise the timer variable */
 	sc_time_t test_in_timer = sc_get_timer(); /* Initialise the timer variable */
 
-	ADCValue[0] = 1;
 	
 	/* Set LEDs to known states, i.e. on */
-	red_led(1);
-	yellow_led(0);
-	
-	scandal_delay(100); /* wait for the UART clocks to settle */
+	red_led(ON);
+	yellow_led(ON);
 	
 	
-	GPIO_SetValue(CAN_EN_PORT, CAN_EN_BIT, 1);
+	
+	GPIO_SetValue(CAN_EN_PORT, CAN_EN_BIT, ON);
 	
 	scandal_register_in_channel_handler(0, &in_channel_0_handler);
 	
@@ -91,16 +94,13 @@ int main (void) {
 		/* This checks whether there are pending requests from CAN, and sends a heartbeat message.
 		* The heartbeat message encodes some data in the first 4 bytes of the CAN message, such as
 		* the number of errors and the version of scandal */
-		//handle_scandal();
+		handle_scandal();
+		/*
+		 * scandal_send_channel(TELEM_LOW, ID_VOLT, readVoltage());
+		 * scandal_send_channel(TELEM_LOW, ID_TEMP, readTemperature());
+		 * scandal_send_channel(TELEM_LOW, ID_VOLT, readVoltage());
+		 */
 		
-		//GPIO_SetValue(DISCHARGE_PORT, DISCHARGE_BIT, ON);
-		//GPIO_SetValue(VOLT_SENSE_EN_PORT, VOLT_SENSE_EN_BIT, ON);
-		
-		//scandal_delay(1000);
-		//GPIO_SetValue(DISCHARGE_PORT, DISCHARGE_BIT, OFF);
-		//GPIO_SetValue(VOLT_SENSE_EN_PORT, VOLT_SENSE_EN_BIT, OFF);
-		//scandal_delay(1000);
-		/* Send a UART message and flash an LED every second */
 		if(sc_get_timer() >= one_sec_timer + 1000) {
 			toggle_red_led();
 			toggle_yellow_led();
@@ -114,11 +114,23 @@ int main (void) {
 	}
 }
 
+//sleep until an interrupt occurs
+void sleep(void) {
+	//power down can controller
+	GPIO_SetValue(CAN_EN_PORT, CAN_EN_BIT, OFF);
+	//enable interrupt on optocoupler pin
+	//GPIO_SetInterrupt(WAKEUP_PORT, WAKEUP_BIT,  uint32_t sense, uint32_t single, uint32_t event );
+	//GPIO_IntEnable(WAKEUP_PORT, WAKEUP_BIT);
+	//??????
+	//Go to sleep my pretty
+	
+}
+
 
 int readVoltage(void) {
-	//int voltage = 0;
+	
 	GPIO_SetValue(VOLT_SENSE_EN_PORT, VOLT_SENSE_EN_BIT, ON);
-	scandal_delay(500);
+	scandal_delay(200);
 	ADCRead(ADC_VOLT);
 	GPIO_SetValue(VOLT_SENSE_EN_PORT, VOLT_SENSE_EN_BIT, OFF);
 	
@@ -128,7 +140,7 @@ int readVoltage(void) {
 int readTemperature(void) {
 	
 	GPIO_SetValue(TEMP_SENSE_EN_PORT, TEMP_SENSE_EN_BIT, ON);
-	scandal_delay(100);
+	scandal_delay(200);
 	ADCRead(ADC_TEMP);
 	GPIO_SetValue(TEMP_SENSE_EN_PORT, TEMP_SENSE_EN_BIT, OFF);
 	
@@ -170,6 +182,9 @@ void burstmode(int mode) {
 void setup_ports(void) {
 	/* Initialize GPIO_ (sets up clock) */
 	GPIO_Init();
+	scandal_init();
+	UART_Init(UART_CLK);
+	ADCInit(ADC_CLKSCALE);
 	
 	GPIO_SetDir(ID_PORT, ID0_BIT, INPUT);
 	GPIO_SetDir(ID_PORT, ID1_BIT, INPUT);
@@ -191,28 +206,4 @@ void setup_ports(void) {
 	//delay for time, or perhaps should specify a voltage to discharge to?
 }
 
-// int main(void)
-// {
-	
-	
-// 		/* Each time we wake up... */
-// 	/* Check TimeTick to see whether to set or clear the LED I/O pin */
-// 	if ( (timer32_0_counter%(LED_TOGGLE_TADCValue[ADCChannels);ICKS/COUNT_MAX)) < ((LED_TOGGLE_TICKS/COUNT_MAX)/2) ) {
-// 		GPIO_SetValue( LED_PORT, LED_BIT, LED_OFF );
-// 		on=0;
-// 	} else {
-// 		GPIO_SetValue( LED_PORT, LED_BIT, LED_ON );
-// 		on=1;		
-// 	}
-// 	ADCRead(0);
-// 	if(ADCValue[0] == 0) {
-// 		GPIO_SetValue( LED_PORT, LED_BIT, LED_ON );
-// 		UARTSend("lol", 3);
-// 	} else if(ADCValue[0] < 512) {
-// 		GPIO_SetValue( LED_PORT, LED_BIT, LED_ON );
-// 		on=1;	
-// 		UARTSend("b", 1);
-// 	} else {
-// 		GPIO_SetValue( LED_PORT, LED_BIT, LED_OFF );
-// 		on=0;
-// 	}
+

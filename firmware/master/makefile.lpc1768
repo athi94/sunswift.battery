@@ -7,7 +7,7 @@ CHECKSUM = checksum
 
 # architecture
 MCU = cortex-m3
-UC = LPC11C14/301
+UC = LPC1768
 
 # define utilities
 CC = arm-none-eabi-gcc
