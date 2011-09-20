@@ -1,0 +1,223 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.3.15)  20 SEP 2011 19:01
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**thesis
+(./thesis.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/share/texmf-texlive/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+\epsfxsize=\dimen105
+\epsfysize=\dimen106
+) (/usr/share/texmf-texlive/tex/latex/units/units.sty
+Package: units 1998/08/04 v0.9b Typesetting units
+(/usr/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texmf-texlive/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip43
+\L@UnitsRaiseTextstyle=\skip44
+\L@UnitsRaiseScriptstyle=\skip45
+)) (./thesis.aux (./cover.aux) (./abbreviations.aux) (./introduction.aux) (./ba
+ckground.aux) (./mywork.aux) (./evaluation.aux) (./conclusion.aux))
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count89
+\scratchdimen=\dimen107
+\scratchbox=\box26
+\nofMPsegments=\count90
+\nofMParguments=\count91
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count92
+\MPscratchDim=\dimen108
+\MPnumerator=\count93
+\everyMPtoPDFconversion=\toks16
+)
+\openout2 = `cover.aux'.
+
+(./cover.tex
+
+! LaTeX Error: Unknown graphics extension: .eps.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \epsfig{file=Arms-vl.eps,silent,width=10cm}
+                                               \\[0.5cm]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \epsfig{file=Arms-vl.eps,silent,width=10cm}\\
+                                                 [0.5cm]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1])
+\openout2 = `abbreviations.aux'.
+
+(./abbreviations.tex) [1
+
+
+
+] (./thesis.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
+)
+\tf@toc=\write3
+\openout3 = `thesis.toc'.
+
+[2
+
+
+]
+\openout2 = `introduction.aux'.
+
+(./introduction.tex
+Chapter 1.
+
+LaTeX Warning: Reference `ch:style' on page 3 undefined on input line 6.
+
+) [3
+
+
+]
+\openout2 = `background.aux'.
+
+(./background.tex
+Chapter 2.
+) [4
+
+
+
+]
+\openout2 = `mywork.aux'.
+
+(./mywork.tex [5
+
+
+] [6] [7]
+Chapter 3.
+[8
+
+]
+Overfull \hbox (1.75674pt too wide) in paragraph at lines 130--137
+[]\OT1/cmr/m/n/12 References: For ev-ery dec-la-ra-tion/equation/method/etc., w
+hich is not widely known,
+ []
+
+) [9]
+\openout2 = `evaluation.aux'.
+
+(./evaluation.tex
+Chapter 4.
+) [10
+
+
+
+]
+\openout2 = `conclusion.aux'.
+
+(./conclusion.tex
+Chapter 5.
+) [11
+
+
+
+] (./thesis.bbl) [12
+
+
+] (./thesis.aux (./cover.aux) (./abbreviations.aux) (./introduction.aux) (./bac
+kground.aux) (./mywork.aux) (./evaluation.aux) (./conclusion.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1119 strings out of 495061
+ 13959 string characters out of 1182621
+ 66142 words of memory out of 3000000
+ 4275 multiletter control sequences out of 15000+50000
+ 8896 words of font info for 31 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 32i,4n,21p,212b,188s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public
+/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmti12.pfb>
+Output written on thesis.pdf (14 pages, 105131 bytes).
+PDF statistics:
+ 72 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

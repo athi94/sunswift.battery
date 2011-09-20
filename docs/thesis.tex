@@ -1,0 +1,30 @@
+\documentclass[12pt]{report}
+\usepackage{epsfig}
+\usepackage{units}
+% sets 25mm margins on A4
+\setlength\textwidth{16cm}
+\setlength\textheight{23cm}
+\setlength\topmargin{-0.7cm}
+\setlength\oddsidemargin{-0.6mm}
+\setlength\evensidemargin{-0.6mm}
+\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+\thispagestyle{empty}
+\include{cover}
+\include{abbreviations}
+\tableofcontents
+%\listoffigures
+%\listoftables
+\include{introduction}
+\include{background}
+\include{mywork}
+\include{evaluation}
+\include{conclusion}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{plain}
+\bibliography{pubs}
+%\appendix
+%\addcontentsline{toc}{chapter}{Appendix 1}
+%\include{appendix}
+\end{document}

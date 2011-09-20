@@ -1,0 +1,39 @@
+\begin{thebibliography}{1}
+
+\bibitem{Coo64}
+Bruce~M. Cooper.
+\newblock {\em Writing Technical Reports}.
+\newblock Penguin Books, Middlesex, 1964.
+
+\bibitem{HasLehKwo05}
+Tawfique Hasan, Torsten Lehmann, and Chee~Yee Kwok.
+\newblock A 5{V} charge pump in a standard 1.8{V} 0.8{$\mu$m} {CMOS} process.
+\newblock In {\em {IEEE} International Symposium on Circuits and Systems},
+  pages 1899--1902, Kobe, Japan, 2005.
+
+\bibitem{NieLeh03}
+Jannik~Hammel Nielsen and Torsten Lehmann.
+\newblock An implantable {CMOS} amplifier for nerve signals.
+\newblock {\em Analog Integrated Circuits and Signal Processing},
+  36(1--2):153--164, July-August 2003.
+
+\bibitem{Noo05}
+Saeid Nooshabadi.
+\newblock Bachelor of engineering thesis and project: timetable and notes for
+  students.
+\newblock http://\hspace{0cm}\relax
+  scoff.ee.unsw.edu.au/\hspace{0cm}document/\hspace{0cm}\relax
+  thesis/\hspace{0cm}thnotes2.pdf, accessed 14/11/2005, 2005.
+\newblock School of El.\ Eng.\ and Telecom., UNSW.
+
+\bibitem{Sid99}
+Charles~H. Sides.
+\newblock {\em How to Write \& Present Technical Information}.
+\newblock Cambridge University Press, Cambridge, 3rd edition, 1999.
+
+\bibitem{StrWhi79}
+William Strunk~Jr. and E.~B. White.
+\newblock {\em The Elements of Style}.
+\newblock Macmillan Publishing Co., New York, 3rd edition, 1979.
+
+\end{thebibliography}
