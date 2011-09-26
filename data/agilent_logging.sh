@@ -1,5 +1,5 @@
 #!/bin/bash
-LOGFILE=disch_log.txt
+LOGFILE=second_charge_log.txt
 LOG_INTERVAL=1			# duration between samples
 #LOG_TIME=100				#-1 - sets infinite time
 

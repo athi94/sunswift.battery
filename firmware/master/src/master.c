@@ -55,7 +55,7 @@
 #include <scandal/leds.h>
 #include <scandal/utils.h>
 #include <scandal/uart.h>
-#include <scandal/stdio.h>
+//#include <scandal/stdio.h>
 
 #include <string.h>
 
@@ -74,7 +74,7 @@ void setup(void) {
 	GPIO_Init();
 	GPIO_SetDir(2,8,1); //Green LED, Out
 	GPIO_SetDir(2,7,1); //Yel LED, Out
-	GPIO_SetDir()
+	//GPIO_SetDir()
 } // setup
 
 /* This is an in-channel handler. It gets called when a message comes in on the
@@ -176,8 +176,3 @@ int main(void) {
 		}
 	}
 }
-
-
-
-GPIO_SetDir
-GPIO_SetValure

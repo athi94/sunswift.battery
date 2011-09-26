@@ -6,7 +6,7 @@
 CHIP = lpc1768
 
 # This should be what your main C file is called
-MAIN_NAME = template
+MAIN_NAME = master
 
 # Directory definitions
 ROOT = ../..
@@ -20,7 +20,7 @@ SRC = ./src
 # Custom project objects
 OBJECTS  = $(MAIN_NAME).o scandal_obligations.o
 # Scandal objects
-OBJECTS += engine.o error.o manager.o maths.o message.o utils.o stdio.o leds.o
+OBJECTS += engine.o error.o manager.o maths.o message.o utils.o leds.o
 # Driver objects
 OBJECTS += can.o flash.o uart.o gpio.o timer.o
 # Add other objects here or in the architecture specific makefile
