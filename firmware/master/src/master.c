@@ -9,7 +9,7 @@
                  the car currently, the MSP430F149 and MCP2515 combination and
                  the LPC11C14 and LPC1768 which have built in CAN controllers.
 
-                 UART_printf is provided by the Scandal stdio library and 
+                 //UART_printf is provided by the Scandal stdio library and 
                  should work well on all 3 micros.
 
                  If you are using this as the base for a new project, you
@@ -55,7 +55,7 @@
 #include <scandal/leds.h>
 #include <scandal/utils.h>
 #include <scandal/uart.h>
-//#include <scandal/stdio.h>
+#include <scandal/stdio.h>
 
 #include <string.h>
 
@@ -80,7 +80,7 @@ void setup(void) {
 /* This is an in-channel handler. It gets called when a message comes in on the
  * registered node/channel combination as set up using the USB-CAN. */
 void in_channel_0_handler(int32_t value, uint32_t src_time) {
-	UART_printf("in_channel_0_handler got called with value %d time at source %u\n\r", (int)value, (unsigned int)src_time);
+	////UART_printf("in_channel_0_handler got called with value %d time at source %u\n\r", (int)value, (unsigned int)src_time);
 }
 
 #define BUFFER_SIZE 128
@@ -92,13 +92,13 @@ int main(void) {
 	char buf_1[BUFFER_SIZE];
 	char buf_2[BUFFER_SIZE];
 	char *current_buf;
-	struct UART_buffer_descriptor buf_desc_1, buf_desc_2;
+//	struct //UART_buffer_descriptor buf_desc_1, buf_desc_2;
 
 	setup();
 
 	scandal_init();
 
-	UART_Init(115200);
+	//UART_Init(115200);
 
 	sc_time_t one_sec_timer = sc_get_timer(); /* Initialise the timer variable */
 	sc_time_t test_in_timer = sc_get_timer(); /* Initialise the timer variable */
@@ -110,16 +110,16 @@ int main(void) {
 	scandal_delay(100); /* wait for the UART clocks to settle */
 
 	/* Display welcome header over UART */
-	UART_printf("Welcome to the template project! This is coming out over UART1\n\r");
-	UART_printf("The 2 debug LEDs should blink at a rate of 1HZ\n\r");
-	UART_printf("If you configure the in channel 0, I should print a message upon receipt of such a channel message\n\r");
-	UART_printf("This also shows an example of double buffer reading from the UART. Enter the text 'time' and press enter\n\r> ");
+	//UART_printf("Welcome to the template project! This is coming out over UART1\n\r");
+	//UART_printf("The 2 debug LEDs should blink at a rate of 1HZ\n\r");
+	//UART_printf("If you configure the in channel 0, I should print a message upon receipt of such a channel message\n\r");
+	//UART_printf("This also shows an example of double buffer reading from the UART. Enter the text 'time' and press enter\n\r> ");
 
 	scandal_register_in_channel_handler(0, &in_channel_0_handler);
 
-	UART_init_double_buffer(&buf_desc_1, buf_1, BUFFER_SIZE,
+	/*UART_init_double_buffer(&buf_desc_1, buf_1, BUFFER_SIZE,
 								&buf_desc_2, buf_2, BUFFER_SIZE);
-
+*/
 	/* This is the main loop, go for ever! */
 	while (1) {
 		/* This checks whether there are pending requests from CAN, and sends a heartbeat message.
@@ -127,14 +127,14 @@ int main(void) {
 		 * the number of errors and the version of scandal */
 		handle_scandal();
 
-		current_buf = UART_readline_double_buffer(&buf_desc_1, &buf_desc_2);
+//		current_buf = //UART_readline_double_buffer(&buf_desc_1, &buf_desc_2);
 
-		/* UART_readline_double_buffer will return a pointer to the current buffer. */
-		if (current_buf != NULL) {
-			if (strncmp("time", current_buf, 4) == 0) {
-				UART_printf("The time is: %d\r\n> ", (int)sc_get_timer());
-			}
-		}
+		/* //UART_readline_double_buffer will return a pointer to the current buffer. */
+//		if (current_buf != NULL) {
+//			if (strncmp("time", current_buf, 4) == 0) {
+				//UART_printf("The time is: %d\r\n> ", (int)sc_get_timer());
+//			}
+//		}
 
 		/* Send a UART and CAN message and flash an LED every second */
 		if(sc_get_timer() >= one_sec_timer + 1000) {
@@ -161,10 +161,10 @@ int main(void) {
 
 			
 
-			UART_printf("I received a channel message in the main loop on in_channel 0, value %u at time %d\n\r", 
+			/*UART_printf("I received a channel message in the main loop on in_channel 0, value %u at time %d\n\r", 
 				(unsigned int)scandal_get_in_channel_value(TEMPLATE_TEST_IN), 
 				(int)scandal_get_in_channel_rcvd_time(TEMPLATE_TEST_IN)
-			);
+			);*/
 
 			if(scandal_get_in_channel_value(TEMPLATE_TEST_IN) == 1) {
 				toggle_red_led();

@@ -9,9 +9,9 @@ TARGET=thesis
 # The following should not need editing:
 export TEXFILES BIBFILE TARGET
 
-$(TARGET).pdf: spellcheck $(TEXFILES) $(BIBFILE)
-	$(MAKE) -C images pdf
-	$(MAKE) -C work pdf
+#$(TARGET).pdf: spellcheck $(TEXFILES) $(BIBFILE)
+#	$(MAKE) -C images pdf
+#	$(MAKE) -C work pdf
 
 $(TARGET).ps: spellcheck $(TEXFILES) $(BIBFILE)
 	$(MAKE) -C images ps
@@ -33,8 +33,8 @@ pdfdebug:
 	$(MAKE) -C images pdf
 	$(MAKE) -C work pdfdebug
 
-read: $(TARGET).pdf
-	evince $(TARGET).pdf
+read: $(TARGET).dvi
+	evince work/$(TARGET).dvi &
 
 gvshow: $(TARGET).ps
 	gv $(TARGET).ps
@@ -46,11 +46,12 @@ acroshow: $(TARGET).pdf
 	acroread $(TARGET).pdf
 
 dvishow: $(TARGET).dvi
-	xdvi work/$(TARGET).dvi
+	evince work/$(TARGET).dvi &
 
 clean:
 	@rm $(TARGET).pdf 2>/dev/null; true
 	@rm $(TARGET).ps 2>/dev/null; true
+	@rm $(TARGET).dvi 2>/dev/null; true
 	@rm *~
 	$(MAKE) -C work clean
 	$(MAKE) -C images clean
