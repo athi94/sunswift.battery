@@ -89,6 +89,7 @@ int main (void) {
 	
 	scandal_register_in_channel_handler(0, &in_channel_0_handler);
 	
+
 	/* This is the main loop, go for ever! */
 	while (1) {
 		/* This checks whether there are pending requests from CAN, and sends a heartbeat message.
